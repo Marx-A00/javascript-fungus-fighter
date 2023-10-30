@@ -76,3 +76,6 @@ Game art is freely available from [OpenGameArt.org](https://opengameart.org/):
 - https://opengameart.org/content/animated-mushroom-monster-pixel-art
 - https://opengameart.org/content/attack-icons-wesnoth
 - https://opengameart.org/content/dark-forest
+
+
+event --> state --> render
