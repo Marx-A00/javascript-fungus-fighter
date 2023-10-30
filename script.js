@@ -24,9 +24,10 @@ let attacks = [
 let fungusHP = 100;
 let attackPoints = 100;
 
+
 function attack(attack){
     fungusHP -= attack.HPDamage;
-    if(fungusHP <=0 ){
+    if(fungusHP <=0){
         let fungus = document.getElementById("freaky-fungus");
         fungus.classList.remove("walk");
         fungus.classList.add("dead");
@@ -38,7 +39,7 @@ function attack(attack){
     console.log(fungusHP);
 
     attackPoints -= attack.APCost;
-    if(attackPoints <=0 ){
+    if(attackPoints <=0){
         let fungus = document.getElementById("freaky-fungus");
         fungus.classList.remove("walk");
         fungus.classList.add("jump");
@@ -48,6 +49,12 @@ function attack(attack){
 
         let disabledAttack2 = document.getElementById("attack2");
         disabledAttack2.setAttribute("disabled", true);
+
+        let disabledAttack3 = document.getElementById("attack3");
+        disabledAttack3.setAttribute("disabled", true);
+
+        let disabledAttack4 = document.getElementById("attack4");
+        disabledAttack4.setAttribute("disabled", true);
     }
 
     console.log("AP:",attackPoints);
