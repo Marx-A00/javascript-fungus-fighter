@@ -27,23 +27,21 @@ let attackPoints = 100;
 
 function attack(attack){
     fungusHP -= attack.HPDamage;
+    attackPoints -= attack.APCost;
     if(fungusHP <=0){
         let fungus = document.getElementById("freaky-fungus");
         fungus.classList.remove("walk");
         fungus.classList.add("dead");
-
-
         fungusHP = 0;
-
+        
     }
-    console.log(fungusHP);
 
-    attackPoints -= attack.APCost;
     if(attackPoints <=0){
         let fungus = document.getElementById("freaky-fungus");
         fungus.classList.remove("walk");
         fungus.classList.add("jump");
         attackPoints = 0;
+        
         let disabledAttack1 = document.getElementById("attack1");
         disabledAttack1.setAttribute("disabled", true);
 
